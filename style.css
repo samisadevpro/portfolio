@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Gloria+Hallelujah&family=Lobster&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  /* Color Palette */
+  --color-light-grey: #d0d0d0;
+  --color-soft-gray: #e5e5e5;
+  --color-white: #fafafa;
+  --color-dark-grey: #333333;
+  --color-background: #ffffff;
+
+  /* font family */
+  --font-amatic-sc: "Amatic SC", cursive;
+  --font-gloria-hallelujah: "Gloria Hallelujah", cursive;
+  --font-lobster: "Lobster", cursive;
+  --font-press-start-2p: "Press Start 2P", monospace;
+  --font-roboto: "Roboto", sans-serif;
+
+  /* font weights  */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+body {
+  font-family: var(--font-roboto);
+}
+
+/* Container Section */
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 1em;
+  background: repeating-linear-gradient(
+      0deg,
+      var(--color-light-grey) 0,
+      var(--color-light-grey) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--color-light-grey) 0,
+      var(--color-light-grey) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  background-color: var(--color-white); /* Off-white background */
+  background-size: 20px 20px;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--color-dark-grey); /* Dark gray text */
+}
+
+/* Header Section */
+
+.header {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+/* Nav-bar Section */
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Menu Bar Section */
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links {
+  font-size: 1.5em;
+  font-family: var(--font-gloria-hallelujah);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Hamburger Section */
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+/* logo Section */
+.logo {
+  padding: 0 1em;
+  width: 10em;
+  height: auto;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo:hover {
+  transform: scale(1.2) rotate(-20deg);
+  opacity: 0.8;
+}
+
+/* Media Section / Responsive Section */
+@media only screen and (max-width: 926px) {
+  /* Menu Bar Section */
+  .menu-bar {
+    position: fixed;
+    left: -110%;
+    padding: 10em;
+    top: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 10px 10px 27px rgb(0, 0, 0);
+  }
+
+  .menu-bar.active {
+    left: 0;
+  }
+  /* Hamburger Section */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
