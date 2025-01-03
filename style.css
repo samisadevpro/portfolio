@@ -362,7 +362,7 @@ body {
 }
 
 .project-title {
-  margin: 20px;
+  margin: 20px 30px;
   font-family: var(--font-press-start-2p);
   font-size: 1em;
   text-shadow: -11px -11px 3px rgb(126, 6, 6);
@@ -374,6 +374,7 @@ body {
   height: auto;
   border-radius: 25px;
   box-shadow: 1px 1px 3px #000, -1px -1px 10px #000;
+  object-fit: cover;
 }
 
 .project-desc {
@@ -383,6 +384,30 @@ body {
   text-align: justify;
   word-spacing: 1px;
   text-shadow: -1px -1px 1px #000;
+}
+
+.project-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.project-btn .btn {
+  padding: 0.6em;
+  font-family: var(--font-lobster);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 1px;
+  background: #fff;
+  box-shadow: 2px 2px 2px #000;
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-btn .btn:hover {
+  transform: scale(1.2);
+  letter-spacing: 2px;
 }
 
 /* Media Section / Responsive Section */
