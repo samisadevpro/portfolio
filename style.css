@@ -410,6 +410,95 @@ body {
   letter-spacing: 2px;
 }
 
+/* Contact Me */
+.contact {
+  padding: 1em;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-title {
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: var(--font-gloria-hallelujah);
+  text-transform: uppercase;
+}
+
+.contact-details {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50px;
+  box-shadow: 0px 10px 10px #000;
+}
+
+.contact-details .detail {
+  padding: 1em;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.contact-details .detail h3 {
+  font-family: var(--font-amatic-sc);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.contact-details .detail p,
+.contact-details .detail a {
+  font-family: var(--font-roboto);
+  color: #fff;
+  text-shadow: -2px -2px 2px #000;
+}
+
+.contact-details .detail ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.contact-details .detail ul a {
+  font-size: 2em;
+  transition: color 0.3s ease-in;
+}
+
+.contact-details .detail ul a:hover {
+  color: rgb(120, 6, 6);
+}
+
+/* footer */
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(img/wave.svg) no-repeat center center/contain;
+  filter: blur(1);
+  opacity: 0.5;
+}
 /* Media Section / Responsive Section */
 @media only screen and (max-width: 926px) {
   /* Menu Bar Section */
