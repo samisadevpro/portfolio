@@ -508,7 +508,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/img/wave.svg) no-repeat center center/contain;
+  background: url(../img/wave.svg) no-repeat center center/contain;
   opacity: 0.8;
 }
 /* Media Section / Responsive Section */
@@ -573,7 +573,7 @@ body {
 
   .about-me {
     padding: 10px;
-    background: url(/img/aboutme-bg.png) no-repeat center center/cover;
+    background: url(../img/aboutme-bg.png) no-repeat center center/cover;
     background-color: transparent;
     box-shadow: none;
   }
