@@ -2,11 +2,13 @@
 
 :root {
   /* Color Palette */
+  --color-black: #000000;
   --color-light-grey: #d0d0d0;
   --color-soft-gray: #e5e5e5;
   --color-white: #fafafa;
   --color-dark-grey: #333333;
   --color-background: #ffffff;
+  --color-bloodyred: #7e0606;
 
   /* font family */
   --font-amatic-sc: "Amatic SC", cursive;
@@ -44,11 +46,11 @@ body {
       transparent 1px,
       transparent 4px
     );
-  background-color: var(--color-white); /* Off-white background */
+  background-color: var(--color-white);
   background-size: 20px 20px;
   background-attachment: fixed;
   background-position: center;
-  color: var(--color-dark-grey); /* Dark gray text */
+  color: var(--color-dark-grey);
 }
 
 /* Header Section */
@@ -88,9 +90,9 @@ body {
 }
 
 .menu-bar li:hover a {
-  text-shadow: 2px 2px 2px grey;
+  text-shadow: 2px 2px 2px var(--color-dark-grey);
   font-size: 1.4em;
-  border-bottom: 2px solid rgb(120, 6, 6);
+  border-bottom: 2px solid var(--color-bloodyred);
   border-bottom-left-radius: 70%;
   border-bottom-right-radius: 20%;
   letter-spacing: 2px;
@@ -108,7 +110,7 @@ body {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: var(--color-black);
 }
 
 /* logo Section */
@@ -142,9 +144,6 @@ body {
   gap: 50px;
 }
 
-.main .main-img {
-}
-
 .about-me {
   margin: 40px auto;
   padding: 0.2em 0.6em;
@@ -152,7 +151,8 @@ body {
   width: 450px;
   height: auto;
   border-radius: 20px;
-  box-shadow: -4px -4px 10px #000, 2px 2px 5px rgb(126, 0, 0);
+  box-shadow: -4px -4px 10px var(--color-black),
+    2px 2px 5px var(--color-bloodyred);
   background: #fff;
   opacity: 0.8;
 }
@@ -170,7 +170,7 @@ body {
   font-size: 1em;
   text-align: justify;
   line-height: 1.5;
-  text-shadow: 1px 1px 1px grey;
+  text-shadow: 1px 1px 1px var(--color-black);
 }
 
 .mini-title {
@@ -224,7 +224,7 @@ body {
   max-width: 500px;
   width: 25em;
   height: 25em;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -239,11 +239,11 @@ body {
 }
 
 .fronted {
-  box-shadow: -3px -3px 1px #000;
+  box-shadow: -3px -3px 1px var(--color-black);
 }
 
 .backend {
-  box-shadow: 3px 3px 1px #000;
+  box-shadow: 3px 3px 1px var(--color-black);
 }
 
 .backend .work-title {
@@ -343,13 +343,13 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 20px;
-  box-shadow: -10px -10px 1px #fff, 3px 3px 1px #000;
+  box-shadow: -10px -10px 1px var(--color-white), 3px 3px 1px var(--color-black);
   border-radius: 25px;
   border-top-left-radius: 25%;
 }
 .project:nth-child(2),
 .project:nth-child(4) {
-  box-shadow: -3px -3px 1px #fff, 10px 10px 1px #000;
+  box-shadow: -3px -3px 1px var(--color-white), 10px 10px 1px var(--color-black);
   border-top-right-radius: 25%;
   border-top-left-radius: 25px;
 }
@@ -358,14 +358,15 @@ body {
   border-top-left-radius: 25%;
   border-top-right-radius: 25%;
   border-bottom-left-radius: 25px;
-  box-shadow: -10px -10px 1px #fff, 10px 10px 1px #000;
+  box-shadow: -10px -10px 1px var(--color-white),
+    10px 10px 1px var(--color-black);
 }
 
 .project-title {
   margin: 20px 30px;
   font-family: var(--font-press-start-2p);
   font-size: 1em;
-  text-shadow: -11px -11px 3px rgb(126, 6, 6);
+  text-shadow: -11px -11px 3px var(--color-bloodyred);
   letter-spacing: 2px;
 }
 
@@ -373,7 +374,7 @@ body {
   width: 80%;
   height: auto;
   border-radius: 25px;
-  box-shadow: 1px 1px 3px #000, -1px -1px 10px #000;
+  box-shadow: 1px 1px 3px var(--color-black), -1px -1px 10px var(--color-black);
   object-fit: cover;
 }
 
@@ -383,7 +384,7 @@ body {
   font-family: 1em;
   text-align: justify;
   word-spacing: 1px;
-  text-shadow: -1px -1px 1px #000;
+  text-shadow: -1px -1px 1px var(--color-black);
 }
 
 .project-btn {
@@ -399,8 +400,8 @@ body {
   font-family: var(--font-lobster);
   font-weight: var(--font-weight-light);
   letter-spacing: 1px;
-  background: #fff;
-  box-shadow: 2px 2px 2px #000;
+  background: var(--color-white);
+  box-shadow: 2px 2px 2px var(--color-black);
   border-radius: 25px;
   transition: transform 0.3s ease-in-out;
 }
@@ -436,7 +437,7 @@ body {
   gap: 20px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 50px;
-  box-shadow: 0px 10px 10px #000;
+  box-shadow: 0px 10px 10px var(--color-black);
 }
 
 .contact-details .detail {
@@ -454,15 +455,15 @@ body {
   font-weight: var(--font-weight-bold);
   font-size: 1.5em;
   letter-spacing: 2px;
-  color: #fff;
-  text-shadow: 2px 2px 2px #000;
+  color: var(--color-white);
+  text-shadow: 2px 2px 2px var(--color-black);
 }
 
 .contact-details .detail p,
 .contact-details .detail a {
   font-family: var(--font-roboto);
-  color: #fff;
-  text-shadow: -2px -2px 2px #000;
+  color: var(--color-white);
+  text-shadow: -2px -2px 2px var(--color-black);
 }
 
 .contact-details .detail ul {
@@ -478,7 +479,7 @@ body {
 }
 
 .contact-details .detail ul a:hover {
-  color: rgb(120, 6, 6);
+  color: var(--color-bloodyred);
 }
 
 /* footer */
@@ -495,7 +496,7 @@ body {
   font-size: 1.5em;
   font-family: var(--font-gloria-hallelujah);
   text-transform: uppercase;
-  color: #000;
+  color: var(--color-black);
   text-align: center;
   text-shadow: -2px -2px 2px rgb(216, 43, 43);
 }
@@ -507,7 +508,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(img/wave.svg) no-repeat center center/contain;
+  background: url(/img/wave.svg) no-repeat center center/contain;
   opacity: 0.8;
 }
 /* Media Section / Responsive Section */
@@ -532,7 +533,7 @@ body {
     box-shadow: 10px 10px 27px rgb(0, 0, 0);
     gap: 70px;
     z-index: 1;
-    background: #fff;
+    background: var(--color-white);
   }
 
   .menu-bar .nav-links {
@@ -572,16 +573,13 @@ body {
 
   .about-me {
     padding: 10px;
-    background: url(img/aboutme-bg.png) no-repeat center center/cover;
+    background: url(/img/aboutme-bg.png) no-repeat center center/cover;
     background-color: transparent;
     box-shadow: none;
   }
 
-  .about-me .about-title {
-  }
-
   .about-me .para {
-    text-shadow: -1px -1px 1px Yellow, 1px 1px 1px #fff;
+    text-shadow: -1px -1px 1px Yellow, 1px 1px 1px var(--color-white);
   }
 
   /* Experience Section */
