@@ -47,7 +47,7 @@ body {
       transparent 4px
     );
   background-color: var(--color-white);
-  background-size: 20px 20px;
+  background-size: 23px 23px;
   background-attachment: fixed;
   background-position: center;
   color: var(--color-dark-grey);
@@ -221,9 +221,9 @@ body {
 .skill-layer {
   padding: 0.6em;
   margin: 60px;
-  max-width: 500px;
-  width: 25em;
-  height: 25em;
+  max-width: 400px;
+  width: 23em;
+  height: 20em;
   background: var(--color-white);
   border-radius: 25px;
   display: flex;
@@ -231,7 +231,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.5s ease-in;
 }
 
 .skill-layer:hover {
@@ -241,9 +241,16 @@ body {
 .fronted {
   box-shadow: -3px -3px 1px var(--color-black);
 }
-
 .backend {
   box-shadow: 3px 3px 1px var(--color-black);
+}
+
+.fronted:hover {
+  box-shadow: 3px 3px 1px var(--color-bloodyred);
+}
+
+.backend:hover {
+  box-shadow: -3px -3px 1px var(--color-bloodyred);
 }
 
 .backend .work-title {
@@ -330,12 +337,12 @@ body {
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 90px;
 }
 
 .project {
   padding: 1em;
-  width: 400px;
+  width: 350px;
   height: auto;
   display: flex;
   align-items: center;
@@ -343,13 +350,16 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 20px;
-  box-shadow: -10px -10px 1px var(--color-white), 3px 3px 1px var(--color-black);
+  box-shadow: -10px -10px 1px var(--color-bloodyred),
+    3px 3px 1px var(--color-black);
   border-radius: 25px;
   border-top-left-radius: 25%;
+  background: var(--color-white);
 }
 .project:nth-child(2),
 .project:nth-child(4) {
-  box-shadow: -3px -3px 1px var(--color-white), 10px 10px 1px var(--color-black);
+  box-shadow: -3px -3px 1px var(--color-bloodyred),
+    10px 10px 1px var(--color-black);
   border-top-right-radius: 25%;
   border-top-left-radius: 25px;
 }
@@ -358,7 +368,7 @@ body {
   border-top-left-radius: 25%;
   border-top-right-radius: 25%;
   border-bottom-left-radius: 25px;
-  box-shadow: -10px -10px 1px var(--color-white),
+  box-shadow: -10px -10px 1px var(--color-bloodyred),
     10px 10px 1px var(--color-black);
 }
 
@@ -382,7 +392,7 @@ body {
 
 .project-desc {
   font-family: var(--font-roboto);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-regular);
   font-family: 1em;
   text-align: justify;
   word-spacing: 1px;
@@ -410,7 +420,6 @@ body {
 
 .project-btn .btn:hover {
   transform: scale(1.2);
-  letter-spacing: 2px;
 }
 
 /* Contact Me */
